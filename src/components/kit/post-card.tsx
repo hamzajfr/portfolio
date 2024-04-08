@@ -13,11 +13,11 @@ export default function Post(post: any) {
         <div className='w-full sm:w-1/3 bg-light-200 dark:bg-dark-200 h-44 rounded-xl flex items-center justify-center'>
           {hero_image ? (
             <Image
-              alt={post.slug}
-              src={hero_image.url}
-              width={hero_image.width}
-              height={hero_image.height}
-              className='h-full w-full object-cover rounded-xl'
+              alt={post?.slug}
+              src={hero_image?.url}
+              width={hero_image?.width}
+              height={hero_image?.height}
+              className='h-full w-full object-cover rounded-b-xl'
             />
           ) : (
             <Newspaper className='w-10 h-10' />
@@ -27,9 +27,9 @@ export default function Post(post: any) {
           <div className=''>
             <h2 className='text-2xl font-medium font-sans mb-2'>{title}</h2>
             <div className='flex items-center gap-4 mb-4'>
-              {tags.split(",").map((tag: any) => (
+              {/* {tags.split(",").map((tag: any) => (
                 <Badge key={tag}>{tag}</Badge>
-              ))}
+              ))} */}
             </div>
             <p className='text-sm'>
               {excerpt} <span className='italic -ml-1'>...Read more</span>

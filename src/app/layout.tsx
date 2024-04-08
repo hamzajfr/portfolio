@@ -34,11 +34,6 @@ export async function generateMetadata() {
   };
 }
 
-const epilogue = Epilogue({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-});
-
 const gaID = process.env.GA_ID || "";
 
 export default async function RootLayout({
@@ -52,7 +47,6 @@ export default async function RootLayout({
     <html lang='en'>
       <body
         className={cx(
-          epilogue.className,
           "bg-light-100 dark:bg-dark-100 h-full text-light-300 dark:text-dark-300",
           "antialiased max-w-screen-lg mx-4 lg:mx-auto overflow-auto relative"
         )}

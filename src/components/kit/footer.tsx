@@ -34,9 +34,9 @@ export default async function Footer({ title }: Props) {
           </span>
         </div>
         <div className='flex items-center ml-auto gap-4'>
-          {socialMedia.map((item: any, i: number) => (
+          {/* {socialMedia.map((item: any, i: number) => (
             <SocialItem key={item.id} item={item} />
-          ))}
+          ))} */}
         </div>
       </Card>
     </footer>

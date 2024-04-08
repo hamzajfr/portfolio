@@ -46,7 +46,7 @@ export default function NavigationHeader({ title, total_posts }: Props) {
               {`${title.replace(" ", "\n")}.`}
             </Link>
             <div className='flex items-center ml-auto'>
-              {/* <NavItems total_posts={total_posts} /> */}
+              <NavItems total_posts={total_posts} />
               <ThemeSwitch />
               <MenuToggle
                 isOpen={isOpen}
@@ -58,7 +58,7 @@ export default function NavigationHeader({ title, total_posts }: Props) {
         </Card>
         {isMobile && isOpen && (
           <Card className='block sm:hidden mt-3 p-4'>
-            {/* <MobileNav total_posts={total_posts} /> */}
+            <MobileNav total_posts={total_posts} />
           </Card>
         )}
       </header>

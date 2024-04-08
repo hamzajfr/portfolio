@@ -12,24 +12,24 @@ export async function generateMetadata() {
   return {
     title: seo.title,
     description: seo.description,
-    metadataBase: new URL(seo.url),
-    openGraph: {
-      ...seo.openGraph,
-      images: seo.openGraph.images.map((image: any) => ({
-        ...image,
-        url: new URL(image.url, seo.url).href,
-      })),
-      locale: "en-US",
-    },
+    // metadataBase: new URL(seo?.url),
+    // openGraph: {
+    //   ...seo.openGraph,
+    //   images: seo.openGraph.images.map((image: any) => ({
+    //     ...image,
+    //     url: new URL(image.url, seo?.url).href,
+    //   })),
+    //   locale: "en-US",
+    // },
     // icons: {
     //   icon: '/assets/favicon/favicon-32x32.png',
     //   shortcut: '/assets/favicon/favicon.ico',
     //   apple: '/assets/favicon/apple-touch-icon.png',
     // },
-    twitter: {
-      ...seo.twitter,
-      image: seo.twitter.image.url,
-    },
+    // twitter: {
+    //   ...seo.twitter,
+    //   image: seo.twitter.image.url,
+    // },
     // manifest: '/assets/favicon/site.webmanifest',
   };
 }
